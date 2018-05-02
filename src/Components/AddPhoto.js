@@ -16,7 +16,9 @@ handleSubmit(event){
  	imageLink: imageLink
  }
  if (imageLink && description) {
- 	this.props.onAddPhoto(post)
+ 	console.log(this.props)
+ 	this.props.addPost(post)
+ 	this.props.history.push('/')
  }
 }
 
@@ -24,7 +26,6 @@ handleSubmit(event){
 	render() {
 		return (
 			<div>
-				<h1>Photowall</h1>
 				<div className="form">
 					<form onSubmit={this.handleSubmit}>
 						<input type="text" placeholder="Link" name="link"/>
