@@ -16,8 +16,7 @@ handleSubmit(event){
  	imageLink: imageLink
  }
  if (imageLink && description) {
- 	console.log(this.props)
- 	this.props.addPost(post)
+ 	this.props.startAddingPost(post)
  	this.props.history.push('/')
  }
 }
